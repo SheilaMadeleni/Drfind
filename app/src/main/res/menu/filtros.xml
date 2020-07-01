@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <item
+        android:id="@+id/itemfiltro"
+        android:iconTint="#FFFFFF"
+        android:title="Ordenar por"
+        app:showAsAction="ifRoom"></item>
+    <item
+        android:id="@+id/itemnombre"
+        android:icon="@drawable/ovalodelgado"
+        android:title="Nombre"
+        app:showAsAction="never"></item>
+    <item
+        android:id="@+id/itemcalificacion"
+        android:title="Calificacion"
+        app:showAsAction="never">
+    </item>
+</menu>

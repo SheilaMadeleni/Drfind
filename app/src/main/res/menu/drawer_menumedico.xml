@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<item android:title="Principal">
+<menu>
+    <item
+        android:id="@+id/inicio"
+        android:icon="@drawable/ic_local_hospital_black_24dp"
+        android:title="Inicio">
+    </item>
+    <item
+        android:id="@+id/citas"
+        android:icon="@drawable/ic_event_black_24dp"
+        android:title="Mis Citas">
+    </item>
+
+</menu>
+</item>
+</menu>

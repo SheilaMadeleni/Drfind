@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Vista.paciente.loginpac"
+    android:background="@color/colorPrimary">
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="113dp"
+        app:srcCompat="@drawable/ic_account_circle_black_24dp" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="33dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:orientation="horizontal">
+
+        <Space
+            android:layout_width="28dp"
+            android:layout_height="39dp" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="209dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="10"
+            android:fontFamily="@font/coming_soon"
+            android:text="usuario:"
+            android:textColor="#F7F3F3"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="348dp"
+        android:layout_height="57dp"
+        android:layout_gravity="center"
+        android:layout_weight="0"
+        android:backgroundTint="#F0EAEA"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textColor="#F6F1F1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:orientation="horizontal">
+
+        <Space
+            android:layout_width="28dp"
+            android:layout_height="39dp" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="209dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="10"
+            android:fontFamily="@font/coming_soon"
+            android:text="contraseña:"
+            android:textColor="#F7F3F3"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/editText4"
+        android:layout_width="348dp"
+        android:layout_height="57dp"
+        android:backgroundTint="#FEFDFD"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:layout_gravity="center"
+        android:textColor="#F6F1F1"
+        />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="41dp" />
+
+    <Button
+        android:id="@+id/btnloginpaciente"
+        android:layout_width="249dp"
+        android:layout_height="63dp"
+        android:layout_gravity="center"
+        android:background="@drawable/ovalo"
+        android:fontFamily="@font/coming_soon"
+        android:text="Iniciar Sesion"
+        android:textAlignment="center"
+        android:textColor="#F8F8F8"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="49dp" />
+
+    <Button
+        android:id="@+id/btnregispaciente"
+        android:layout_width="247dp"
+        android:layout_height="63dp"
+        android:layout_gravity="center"
+        android:background="@drawable/ovalo"
+        android:fontFamily="@font/coming_soon"
+        android:text="Registrarse"
+        android:textAlignment="center"
+        android:textColor="#F8F8F8"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+</LinearLayout>

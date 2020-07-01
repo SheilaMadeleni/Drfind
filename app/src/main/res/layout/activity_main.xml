@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Vista.MainActivity"
+    android:background="@color/colorPrimary">
+
+    <TextView
+        android:id="@+id/textViewmed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/coming_soon"
+        android:text="¡BIENVENIDO!"
+        android:textAlignment="center"
+        android:textColor="#F7F3F3"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
+
+    <TextView
+        android:id="@+id/textViewmed1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/coming_soon"
+        android:text="Seleccione el tipo de usuario"
+        android:textAlignment="center"
+        android:textColor="#F7F3F3"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="37dp" />
+
+    <ImageView
+        android:id="@+id/imageViewmed"
+        android:layout_width="match_parent"
+        android:layout_height="117dp"
+        app:srcCompat="@drawable/ic_local_hospital_black_24dp" />
+
+    <Button
+        android:id="@+id/btnmedico"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:background="@drawable/ovalodelgado"
+        android:fontFamily="@font/coming_soon"
+        android:text="medico"
+        android:textAlignment="center"
+        android:textColor="#F8F8F8"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="45dp" />
+
+    <ImageView
+        android:id="@+id/imageViewmed2"
+        android:layout_width="match_parent"
+        android:layout_height="109dp"
+        app:srcCompat="@drawable/ic_person_black_24dp" />
+
+    <Button
+        android:id="@+id/btnpaciente"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:background="@drawable/ovalodelgado"
+        android:fontFamily="@font/coming_soon"
+        android:text="Paciente"
+        android:textAlignment="center"
+        android:textColor="#F8F8F8"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+</LinearLayout>
