@@ -1,6 +1,7 @@
 package com.example.drfind.Controlador;
 
-import com.example.drfind.Controlador.adaptadores.citadetalle;
+import com.example.drfind.Controlador.adaptadores.AdaptadoresPaciente.mostrarcitmodelo;
+import com.example.drfind.Controlador.adaptadores.AdaptadoresPaciente.sacarcitamodelo;
 import com.example.drfind.modelo.conexion;
 
 import java.sql.PreparedStatement;
@@ -32,32 +33,62 @@ public class Pacientes {
             e.getMessage();
         }
     }
-    public void agregarcita(String fechitacita, String horitacita){
+    public void agregarcita(Integer id,String fechitacita, String hora,String usuariomed){
         conexion db=new conexion();
                 try{
-                    PreparedStatement pst=db.conexionbd().prepareStatement("insert_fecha ?,?");
-                    pst.setString(1,fechitacita);
-                    pst.setString(2,horitacita);
+                    PreparedStatement pst=db.conexionbd().prepareStatement("ins_citapac ?,?,?,?");
+                    pst.setInt(1,id);
+                    pst.setString(2,fechitacita);
+                    pst.setString(3,hora);
+                    pst.setString(4,usuariomed);
                     pst.executeUpdate();
                 } catch (SQLException e) {
-                    e.printStackTrace();
+                    e.getMessage();
                 }
     }
-    public List<citadetalle> mostrarlistcita(String nombreusume) {
-        List<citadetalle> citas = new ArrayList<>();
-        conexion db = new conexion();
+    public List<sacarcitamodelo>sacarcitamodeloList(String usuariomed,String fechacita){
+        List<sacarcitamodelo> citapac=new ArrayList<>();
+        conexion db=new conexion();
         try {
-            PreparedStatement pst = db.conexionbd().prepareStatement("list_citapaciente ?");
-            pst.setString(1,nombreusume);
-        ResultSet rst=pst.executeQuery();
+            PreparedStatement pst=db.conexionbd().prepareStatement("ins_horitia ?,?");
+            pst.setString(2,usuariomed);
+            pst.setString(1,fechacita);
+            ResultSet rst=pst.executeQuery();
             while (rst.next()){
-                citas.add(new citadetalle(rst.getString("nombremedico"),rst.getString("nombreespecialidad"),
-                        rst.getString("fechacita"), rst.getString("horacita")));
+                citapac.add(new sacarcitamodelo(rst.getString("usuariomed"),rst.getString("horas"),rst.getString("fechacita"),rst.getString("id")));
             }
-        } catch (SQLException e) {
-            e.printStackTrace();
+        }catch (SQLException e){
+            e.getMessage();
         }
-        return citas;
+        return citapac;
+    }
+    public List<mostrarcitmodelo>mostrarcitmodeloList(String usuariopac){
+        List<mostrarcitmodelo> listci=new ArrayList<>();
+        conexion db=new conexion();
+        try {
+            PreparedStatement pst=db.conexionbd().prepareStatement("list_citas_paciente ?");
+            pst.setString(1,usuariopac);
+            ResultSet rst=pst.executeQuery();
+            while (rst.next()){
+                listci.add(new mostrarcitmodelo(rst.getString("nombremedico"),rst.getString("usuariomed"),rst.getString("horacita"),rst.getString("fechacita"),rst.getString("usuariopac")));
+            }
+        }catch (SQLException e){
+            e.getMessage();
+        }
+        return listci;
     }
 
+    public void eliminarcitapac (String usuariomed, String fechacita, String horacita, String usuariopac){
+        conexion db=new conexion();
+        try {
+            PreparedStatement pst=db.conexionbd().prepareStatement("elim_cit ?,?,?,?");
+            pst.setString(1,usuariomed);
+            pst.setString(2,fechacita);
+            pst.setString(3,horacita);
+            pst.setString(4,usuariopac);
+            pst.executeUpdate();
+        }catch (Exception e){
+            e.getMessage();
+        }
+    }
 }

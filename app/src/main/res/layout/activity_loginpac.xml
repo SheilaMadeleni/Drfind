@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".Vista.paciente.loginpac"
-    android:background="@color/colorPrimary">
+    android:background="@color/colorAccent">
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
@@ -41,7 +41,7 @@
     </LinearLayout>
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/edtusuariopaci"
         android:layout_width="348dp"
         android:layout_height="57dp"
         android:layout_gravity="center"
@@ -75,15 +75,33 @@
     </LinearLayout>
 
     <EditText
-        android:id="@+id/editText4"
+        android:id="@+id/edtpasspaci"
         android:layout_width="348dp"
         android:layout_height="57dp"
+        android:layout_gravity="center"
         android:backgroundTint="#FEFDFD"
         android:ems="10"
         android:inputType="textPassword"
+        android:textColor="#F6F1F1" />
+
+    <TextView
+        android:id="@+id/resulpaclog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:textColor="#F6F1F1"
-        />
+        android:fontFamily="@font/coming_soon"
+        android:textColor="#F7F3F3"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+    <CheckBox
+        android:id="@+id/checkBoxuserpac"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:buttonTint="#FFFFFF"
+        android:text="Guardar datos"
+        android:textColor="#FFFFFF" />
+
 
     <Space
         android:layout_width="match_parent"

@@ -1,23 +1,24 @@
 package com.example.drfind.Controlador;
 
-import com.example.drfind.Controlador.adaptadores.especimodelo;
+import com.example.drfind.Controlador.adaptadores.AdaptadoresPaciente.especimodelo;
 import com.example.drfind.modelo.conexion;
 
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
 public class especialidad {
-    public List<especimodelo>mostrar(){
+    public List<especimodelo>mostrar(String usuariopa){
     List<especimodelo> especi = new ArrayList<>();
         conexion db= new conexion();
         try {
-            Statement st=db.conexionbd().createStatement();
-            ResultSet rst=st.executeQuery("llamaespecialidad");
+            PreparedStatement st=db.conexionbd().prepareStatement("llamaespecialidad ?");
+            st.setString(1,usuariopa);
+            ResultSet rst=st.executeQuery();
             while (rst.next()){
-                especi.add(new especimodelo(rst.getInt("idespecialidad"),rst.getString("nombreespecialidad")));
+                especi.add(new especimodelo(rst.getInt("idespecialidad"),rst.getString("nombreespecialidad"),rst.getString("usuariopac")));
             }
         }catch (SQLException e){
             e.getMessage();

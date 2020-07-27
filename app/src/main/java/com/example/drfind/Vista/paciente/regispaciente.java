@@ -70,7 +70,6 @@ public class regispaciente extends AppCompatActivity implements View.OnClickList
                             emailpaciente.getText().toString(),Integer.parseInt(telefopaciente.getText().toString()), fechanacimientopaciente.getText().toString());
                 }
                 break;
-
             case R.id.btncanregispaciente:
                 Intent j = new Intent(this, loginpac.class);
                 startActivity(j);

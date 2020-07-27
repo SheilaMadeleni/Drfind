@@ -12,7 +12,7 @@ public class conexion {
             StrictMode.ThreadPolicy policy=new StrictMode.ThreadPolicy.Builder().permitAll().build();
             StrictMode.setThreadPolicy(policy);
             Class.forName("net.sourceforge.jtds.jdbc.Driver").newInstance();
-            connection= DriverManager.getConnection("jdbc:jtds:sqlserver://192.168.43.239;databaseName=appmedicina;user=sa;password=123;");
+            connection= DriverManager.getConnection("jdbc:jtds:sqlserver://192.168.1.2;databaseName=appmedicina;user=sa;password=123;");
         } catch (Exception e){
            e.getMessage();
         }

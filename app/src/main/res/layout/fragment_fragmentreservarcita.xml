@@ -3,17 +3,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Vista.Fragments.Fragmentreservarcita"
-    android:background="@color/colorPrimary"
+    tools:context=".Vista.Fragments.FragmentsPacientes.Fragmentreservarcita"
+    android:background="@color/colorAccent"
     android:orientation="vertical"
     android:layout_marginTop="55dp">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
-        <TextView
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimaryDark"
+            android:orientation="vertical">
+
+            <TextView
             android:id="@+id/textView4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -24,13 +29,89 @@
             android:textColor="#F7F3F3"
             android:textSize="24sp"
             android:textStyle="bold" />
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/reciclerreservacita"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/colorPrimary">
+            <TextView
+                android:id="@+id/txtusernameci"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:fontFamily="@font/coming_soon"
+                android:text="Usuariomed"
+                android:textAlignment="center"
+                android:textColor="#F7F3F3"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/txtpacnameci"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/coming_soon"
+                android:text="Usuariomed"
+                android:textAlignment="center"
+                android:textColor="#F7F3F3"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_weight="0"
+                android:orientation="horizontal">
 
-        </androidx.recyclerview.widget.RecyclerView>
-    </LinearLayout>
+
+                <EditText
+                    android:id="@+id/edtfechacita"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="#F8F6F6"
+                    android:ems="10"
+                    android:inputType="date"
+                    android:textAlignment="center"
+                    android:textColor="#FBF7F7"
+                    android:textSize="24sp" />
+
+                <Button
+                    android:id="@+id/btnfechacita"
+                    android:layout_width="40dp"
+                    android:layout_height="66dp"
+                    android:layout_weight="0.3"
+                    android:background="@drawable/ic_today_black_24dp"
+                    android:backgroundTint="#FFFFFF"
+                    android:foregroundTint="#FFFFFF"
+                    android:shadowColor="#FFFFFF"
+                    android:textColor="#FFFFFF"
+                    android:textColorHighlight="#515B79"
+                    android:textColorHint="#FFFFFF"
+                    android:textColorLink="#1C243D"
+                    android:textCursorDrawable="@drawable/ic_today_black_24dp" />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/txtresultadocita"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+            <Button
+                android:id="@+id/btnhorasdisp"
+                android:layout_width="246dp"
+                android:layout_height="36dp"
+                android:layout_gravity="center"
+                android:background="@drawable/ovalodelgado"
+                android:text="Horas disponibles"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:layout_margin="25dp"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/reciclerreservacita"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorAccent">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </LinearLayout>
+    </ScrollView>
 
 </FrameLayout>

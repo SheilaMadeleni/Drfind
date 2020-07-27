@@ -14,8 +14,8 @@
     </corners>
 
     <stroke
-        android:width="10px"
-        android:color="@color/colorPrimaryDark"
+        android:width="15px"
+        android:color="@color/colorAccent"
         ></stroke>
     <solid
         android:color="@android:color/transparent"

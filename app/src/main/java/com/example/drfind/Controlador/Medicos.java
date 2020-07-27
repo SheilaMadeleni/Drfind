@@ -1,8 +1,7 @@
 package com.example.drfind.Controlador;
 
-import com.example.drfind.Controlador.adaptadores.medicodetallemodelo;
-import com.example.drfind.Controlador.adaptadores.medicomodelo;
-import com.example.drfind.Controlador.adaptadores.sacacita;
+import com.example.drfind.Controlador.adaptadores.AdaptadoresPaciente.medicodetallemodelo;
+import com.example.drfind.Controlador.adaptadores.AdaptadoresPaciente.medicomodelo;
 import com.example.drfind.modelo.conexion;
 
 import java.sql.PreparedStatement;
@@ -34,6 +33,39 @@ public class Medicos {
             e.getMessage();
         }
     }
+    public void agregarhora(String usuamedico,String horas){
+        conexion db=new conexion();
+        try {
+            PreparedStatement pst=db.conexionbd().prepareStatement("insert_horario ?,?");
+            pst.setString(1,usuamedico);
+            pst.setString(2,horas);
+        } catch (SQLException e) {
+            e.getMessage();
+        }
+    }
+
+    public void ratingbar(String usuariomed, float califica){
+        conexion db=new  conexion();
+        try {
+            PreparedStatement pst=db.conexionbd().prepareStatement("ratingbar_valor ?,?");
+            pst.setString(1,usuariomed);
+            pst.setFloat(2,califica);
+            pst.executeUpdate();
+        }catch (Exception e){
+            e.getMessage();
+        }
+    }
+
+    public void eliminar(String usuariomed){
+        conexion db=new conexion();
+        try {
+            PreparedStatement pst=db.conexionbd().prepareStatement("elim_pac ?");
+            pst.setString(1,usuariomed);
+            pst.executeUpdate();
+        }catch (Exception e){
+            e.getMessage();
+        }
+    }
 
         public List<medicomodelo> mostrarlistmedi(int idespeci){
         List<medicomodelo> medicos=new ArrayList<>();
@@ -51,7 +83,6 @@ public class Medicos {
         }
         return medicos;
     }
-
     public List<medicodetallemodelo> mostrardetallemedi(String usuariomedico){
         List<medicodetallemodelo> medicos=new ArrayList<>();
         conexion db=new conexion();
@@ -68,21 +99,7 @@ public class Medicos {
         }
         return medicos;
     }
-    public List<sacacita> mostarcita (String username){
-        List<sacacita> cit = new ArrayList<>();
-        conexion db = new conexion();
-        try {
-            PreparedStatement pst = db.conexionbd().prepareStatement("list_citara ?");
-            pst.setString(1,username);
-            ResultSet rst=pst.executeQuery();
-            while (rst.next()){
-                cit.add(new sacacita(rst.getString("usuariomed")));
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return cit;
-    }
+
 }
 
 

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".Vista.MainActivity"
-    android:background="@color/colorPrimary">
+    android:background="@color/colorAccent">
 
     <TextView
         android:id="@+id/textViewmed"
@@ -49,7 +49,7 @@
         android:layout_width="wrap_content"
         android:layout_height="45dp"
         android:layout_gravity="center"
-        android:background="@drawable/ovalodelgado"
+        android:background="@drawable/ovalo"
         android:fontFamily="@font/coming_soon"
         android:text="medico"
         android:textAlignment="center"
@@ -72,7 +72,7 @@
         android:layout_width="wrap_content"
         android:layout_height="45dp"
         android:layout_gravity="center"
-        android:background="@drawable/ovalodelgado"
+        android:background="@drawable/ovalo"
         android:fontFamily="@font/coming_soon"
         android:text="Paciente"
         android:textAlignment="center"

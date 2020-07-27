@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
+    android:background="@color/colorAccent"
     android:orientation="vertical"
     android:layout_marginTop="55dp">
 
@@ -28,7 +28,7 @@
             android:id="@+id/reciclerpacientes"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/colorPrimary">
+            android:background="@color/colorAccent">
 
         </androidx.recyclerview.widget.RecyclerView>
     </LinearLayout>

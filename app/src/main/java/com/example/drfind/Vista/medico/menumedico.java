@@ -2,6 +2,7 @@ package com.example.drfind.Vista.medico;
 
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -12,8 +13,8 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import com.example.drfind.Vista.Fragments.CitasmedicoFragment;
-import com.example.drfind.Vista.Fragments.IniciomedicoFragment;
+import com.example.drfind.Vista.Fragments.FragmentsMedico.CitasmedicoFragment;
+import com.example.drfind.Vista.Fragments.FragmentsMedico.IniciomedicoFragment;
 import com.example.drfind.R;
 import com.google.android.material.navigation.NavigationView;
 
@@ -21,6 +22,7 @@ public class menumedico extends AppCompatActivity implements NavigationView.OnNa
     DrawerLayout drawerLayout;
     ActionBarDrawerToggle actionBarDrawerToggle;
     Toolbar toolbar;
+    TextView nomu;
     NavigationView navigationView;
     FragmentManager fragmentManager;
     FragmentTransaction fragmentTransaction;
@@ -55,6 +57,7 @@ public class menumedico extends AppCompatActivity implements NavigationView.OnNa
             fragmentTransaction.commit();
         }
         if(item.getItemId()==R.id.citas){
+
             fragmentManager=getSupportFragmentManager();
             fragmentTransaction=fragmentManager.beginTransaction();
             fragmentTransaction.replace(R.id.container, new CitasmedicoFragment());

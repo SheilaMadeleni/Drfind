@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".Vista.medico.loginmed"
-    android:background="@color/colorPrimary">
+    android:background="@color/colorAccent">
 
     <ImageView
         android:id="@+id/imageView"
@@ -42,7 +42,7 @@
     </LinearLayout>
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/edtusuariomed"
         android:layout_width="348dp"
         android:layout_height="57dp"
         android:layout_gravity="center"
@@ -76,7 +76,7 @@
     </LinearLayout>
 
     <EditText
-        android:id="@+id/editText4"
+        android:id="@+id/edtpassmedico"
         android:layout_width="348dp"
         android:layout_height="57dp"
         android:backgroundTint="#FEFDFD"
@@ -85,6 +85,23 @@
         android:layout_gravity="center"
         android:textColor="#F6F1F1"
         />
+    <TextView
+        android:id="@+id/resulmedlog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/coming_soon"
+        android:textColor="#F7F3F3"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+    <CheckBox
+        android:id="@+id/checkBoxusermed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:buttonTint="#FFFFFF"
+        android:text="Guardar datos"
+        android:textColor="#FFFFFF" />
 
     <Space
         android:layout_width="match_parent"

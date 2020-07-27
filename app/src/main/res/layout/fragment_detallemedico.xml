@@ -3,8 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Vista.Fragments.detallemedico"
-    android:background="@color/colorPrimary"
+    tools:context=".Vista.Fragments.FragmentsPacientes.detallemedico"
+    android:background="@color/colorAccent"
     android:orientation="vertical"
     android:layout_marginTop="55dp">
 
@@ -12,7 +12,7 @@
     android:id="@+id/recyclerdetallemedico"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary">
+    android:background="@color/colorAccent">
 
 </androidx.recyclerview.widget.RecyclerView>
 </RelativeLayout>
